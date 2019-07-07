@@ -1,0 +1,54 @@
+.container {
+	border: 1px solid red;
+	height: 100vh;
+	width: 100%;
+}
+
+.have-block {
+	perspective: 550px;
+}
+
+.item {
+	width: 200px;
+	height: 300px;
+	transform-style: preserve-3d;
+	position: relative;
+	transition: all .5s;
+	transform: scale(0.9);
+}
+.item:hover{
+	transition: all .5s;
+	/*transform: scale(1);*/
+	transform: translate3d(0, 10px, 0);
+}
+
+.item:hover .side {
+	transition: all .5s;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.font-side {
+	background: red;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+}
+.back-side {
+	background: blue;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+.side {
+	transition: all .5s;
+	backface-visibility: hidden;
+	border-radius: 5px;
+}
+
+.flip {
+	transform: rotateY(180deg) !important;
+}
